@@ -1,0 +1,5 @@
+- name: Webserver Role Practice
+  hosts: all
+
+  roles:
+    - webserver

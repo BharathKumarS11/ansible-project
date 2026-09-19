@@ -1,0 +1,23 @@
+- name: Variable Practice
+  hosts: all
+
+  vars:
+    app_name: devops-app
+    app_directory: /tmp/devops-app
+    app_message: "DevOps application deployed successfully"
+
+  tasks:
+    - name: Create application directory
+      file:
+        path: "{{ app_directory }}"
+        state: directory
+
+    - name: Create application file
+      copy:
+        content: "{{ app_message }}\n"
+        dest: "{{ app_directory }}/application.txt"
+
+    - name: Create application name file
+      copy:
+        content: "{{ app_name }}\n"
+        dest: "{{ app_directory }}/name.txt"

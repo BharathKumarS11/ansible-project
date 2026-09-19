@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ app_name }}</title>
+</head>
+
+<body>
+    <h1>{{ app_name }}</h1>
+
+    <p>Environment: {{ app_environment }}</p>
+    <p>Server: {{ ansible_hostname }}</p>
+    <p>Operating System: {{ ansible_distribution }}</p>
+    <p>Architecture: {{ ansible_architecture }}</p>
+
+    <hr>
+
+    <p>Application deployed automatically using Ansible.</p>
+</body>
+</html>

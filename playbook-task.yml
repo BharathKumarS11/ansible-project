@@ -1,0 +1,18 @@
+- name: Ansible Playbook Practice
+  hosts: all
+
+  tasks:
+    - name: Create application directory
+      file:
+        path: /tmp/myapp
+        state: directory
+
+    - name: Create application file
+      copy:
+        content: "Application deployed using Ansible\n"
+        dest: /tmp/myapp/app.txt
+
+    - name: Create status file
+      copy:
+        content: "Deployment successful\n"
+        dest: /tmp/myapp/status.txt

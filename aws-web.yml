@@ -1,0 +1,6 @@
+---
+- name: Configure AWS Web Server
+  hosts: aws_web
+  become: yes
+  roles:
+    - aws-web

@@ -1,0 +1,5 @@
+---
+app_name: "DevOps Production Web App"
+app_environment: "production"
+app_port: 80
+app_directory: /var/www/devops-app

@@ -1,0 +1,13 @@
+- name: Template Practice
+  hosts: all
+
+  vars:
+    app_name: devops-app
+    app_port: 8080
+    environment: development
+
+  tasks:
+    - name: Create application configuration
+      template:
+        src: templates/app.conf.j2
+        dest: /tmp/app.conf

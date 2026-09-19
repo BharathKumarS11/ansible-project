@@ -1,0 +1,13 @@
+- name: My First Ansible Playbook
+  hosts: all
+
+  tasks:
+    - name: Create Ansible directory
+      file:
+        path: /tmp/ansible-playbook-test
+        state: directory
+
+    - name: Create test file
+      copy:
+        content: "Hello from Ansible Playbook\n"
+        dest: /tmp/ansible-playbook-test/hello.txt

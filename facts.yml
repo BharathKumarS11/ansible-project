@@ -1,0 +1,11 @@
+- name: Display server information
+  hosts: all
+
+  tasks:
+    - name: Show operating system
+      debug:
+        msg: "Operating System: {{ ansible_distribution }}"
+
+    - name: Show hostname
+      debug:
+        msg: "Hostname: {{ ansible_hostname }}"

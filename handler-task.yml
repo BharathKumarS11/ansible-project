@@ -1,0 +1,14 @@
+- name: Handler Practice
+  hosts: all
+
+  tasks:
+    - name: Create configuration file
+      copy:
+        content: "version=2.0\n"
+        dest: /tmp/myapp.conf
+      notify: Configuration Changed
+
+  handlers:
+    - name: Configuration Changed
+      debug:
+        msg: "Configuration changed - handler executed!"
