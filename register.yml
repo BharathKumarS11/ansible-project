@@ -1,0 +1,16 @@
+---
+- name: Check application
+  hosts: localhost
+
+  tasks:
+    - name: Check Nginx status
+      ansible.builtin.command: systemctl is-active nginx
+      register: nginx_status
+      failed_when: false
+      changed_when: false
+      tags:
+        - check
+
+    - name: Display Nginx status
+      ansible.builtin.debug:
+        msg: "Nginx status is: {{ nginx_status.stdout }}"

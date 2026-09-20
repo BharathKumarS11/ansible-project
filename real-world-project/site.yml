@@ -1,7 +1,7 @@
 ---
 - name: Deploy Production Web Application
   hosts: web
-  become: yes
+  become: true
 
   roles:
     - webapp
